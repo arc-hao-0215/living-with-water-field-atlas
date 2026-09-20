@@ -17,7 +17,9 @@ The visual language draws on Harvard GSD publications and architectural atlases:
 
 - Map, timeline and index views
 - Filters for six research lenses
-- Eight linked field records
+- Eighteen linked field records
+- Representative photography with visible source and licence credits
+- Original analytical drawings for every field record
 - Keyboard-accessible map markers and controls
 - Responsive layouts for desktop, tablet and mobile
 - Reduced-motion support
@@ -36,3 +38,7 @@ No package installation or build step is required. The published site is the con
 ## Content updates
 
 Research records are stored at the beginning of `dist/assets/script.js`. Replace edited field readings with Hao's final notes and add only quotations or interview material cleared for public use.
+
+## Image credits
+
+Most field images are reusable photographs from Wikimedia Commons with the photographer and licence shown directly in each record. Schoonschip uses the official Space&Matter project image, and Benthemplein uses the official De Urbanisten project image by Ossip van Duivenbode. The analytical drawings are original diagrams created for this atlas and are not reproductions of architects' technical drawings.
