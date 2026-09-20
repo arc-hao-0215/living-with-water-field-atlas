@@ -11,7 +11,7 @@ The interface combines four useful ideas from architectural research websites wh
 - **Forensic Architecture:** research material is structured as connected evidence. Each record separates verified context, field reading and research insight to prevent claims from blending together.
 - **Goa Water Stories:** fieldwork becomes a narrative rather than a catalogue. The atlas retains its layered storytelling while avoiding desktop-only audio and interaction requirements.
 
-The visual language draws on Harvard GSD publications and architectural atlases: high-contrast black-and-white cartography, fine rules, monospaced metadata, an editorial display scale and a restrained water-blue accent. The geographic view uses Leaflet with OpenStreetMap data. Field sites are intentionally shown without a connecting route line.
+The visual language draws on Harvard GSD publications and architectural atlases: high-contrast black-and-white cartography, fine rules, monospaced metadata, an editorial display scale and a restrained water-blue accent. The geographic view uses a locally bundled copy of Leaflet with OpenStreetMap data. Field sites are intentionally shown without a connecting route line.
 
 ## Included interactions
 
