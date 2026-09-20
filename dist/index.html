@@ -10,7 +10,9 @@
     />
     <title>Living with Water | Hao Chang</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
     <script src="./assets/script.js" defer></script>
   </head>
   <body>
@@ -58,48 +60,19 @@
         <section class="stage" aria-label="Interactive research atlas">
           <div class="stage-view is-active" id="mapView" data-panel="map">
             <div class="map-topline">
-              <span>Western Netherlands / Field territory</span>
+              <span>Western Netherlands / Geographic field index</span>
               <div class="map-legend" aria-label="Map legend">
-                <span><i class="legend-line"></i> Research route</span>
                 <span><i class="legend-dot"></i> Field site</span>
               </div>
             </div>
             <div class="map-canvas" id="mapCanvas">
-              <svg class="territory-map" viewBox="0 0 760 680" role="img" aria-labelledby="mapTitle mapDesc">
-                <title id="mapTitle">Field sites in the western Netherlands</title>
-                <desc id="mapDesc">An interpretive map showing eight research sites between Amsterdam, Utrecht and Rotterdam.</desc>
-                <defs>
-                  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-                    <path d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" stroke-width="0.55" />
-                  </pattern>
-                  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
-                    <feGaussianBlur stdDeviation="5" result="blur" />
-                    <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-                  </filter>
-                </defs>
-                <rect class="map-grid" width="760" height="680" fill="url(#grid)" />
-                <g class="landmass" aria-hidden="true">
-                  <path d="M94 74 C186 38 250 42 317 88 C385 135 434 136 520 105 C616 70 689 102 724 178 L729 640 L285 652 C255 593 231 534 190 488 C132 422 73 391 43 309 C13 227 29 131 94 74Z" />
-                </g>
-                <g class="water-system" aria-hidden="true">
-                  <path class="water-major" d="M330 72 C338 147 315 201 350 276 C386 353 367 416 300 470 C246 513 205 555 174 648" />
-                  <path class="water-major" d="M716 428 C632 425 558 450 491 478 C412 510 344 506 300 470" />
-                  <path d="M531 109 C501 179 460 245 350 276" />
-                  <path d="M350 276 C290 288 230 315 170 352" />
-                  <path d="M491 478 C485 536 463 594 428 650" />
-                  <path d="M300 470 C270 436 237 413 194 399" />
-                </g>
-                <path id="routePath" class="route-path" d="" aria-hidden="true" />
-                <g id="mapMarkers" class="map-markers"></g>
-                <g class="map-labels" aria-hidden="true">
-                  <text x="424" y="178">AMSTERDAM</text>
-                  <text x="520" y="300">UTRECHT</text>
-                  <text x="222" y="512">ROTTERDAM</text>
-                  <text x="37" y="220" transform="rotate(-90 37 220)">NORTH SEA</text>
-                  <text x="551" y="471">RHINE–MEUSE DELTA</text>
-                </g>
-              </svg>
-              <div class="map-scale" aria-hidden="true"><span></span>25 KM</div>
+              <div id="fieldMap" class="field-map" role="application" aria-label="Interactive geographic map of eight field sites in the western Netherlands"></div>
+              <div class="map-folio" aria-hidden="true">
+                <span>NL / 52°N</span>
+                <strong>WATER SYSTEMS</strong>
+                <span>FIELD ATLAS 01</span>
+              </div>
+              <div class="north-arrow" aria-hidden="true"><span>N</span><i>↑</i></div>
               <div class="coordinate-readout" id="coordinateReadout">52.3557° N / 4.8946° E</div>
               <div class="map-instruction">Select a numbered site to open its field record.</div>
             </div>

@@ -7,11 +7,11 @@ An interactive field atlas by Hao Chang, developed from SOM Foundation Fellowshi
 The interface combines four useful ideas from architectural research websites while correcting their common weaknesses:
 
 - **Out of the Desert:** map-first navigation and spatial discovery. The atlas keeps that immediacy, but adds a persistent record panel so visitors never lose context.
-- **MIT Senseable City Lab:** data-led spatial reading and movement across scales. The first version uses a lightweight SVG system rather than a heavy 3D scene, improving loading, accessibility and mobile use.
+- **MIT Senseable City Lab:** data-led spatial reading and movement across scales. The map uses real vector geography so roads, waterways and city relationships remain legible at every zoom level.
 - **Forensic Architecture:** research material is structured as connected evidence. Each record separates verified context, field reading and research insight to prevent claims from blending together.
 - **Goa Water Stories:** fieldwork becomes a narrative rather than a catalogue. The atlas retains its layered storytelling while avoiding desktop-only audio and interaction requirements.
 
-The visual language draws on architectural drawings and academic publications: near-black ground, fine rules, monospaced metadata, an editorial display scale and a restrained water-blue accent.
+The visual language draws on Harvard GSD publications and architectural atlases: high-contrast black-and-white cartography, fine rules, monospaced metadata, an editorial display scale and a restrained water-blue accent. The geographic view uses MapLibre GL JS with OpenFreeMap's Positron basemap and OpenStreetMap-derived data. Field sites are intentionally shown without a connecting route line.
 
 ## Included interactions
 

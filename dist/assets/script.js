@@ -8,8 +8,8 @@ const sites = [
     scale: "Building / street",
     primary: "Infrastructure",
     lenses: ["Infrastructure", "Development"],
-    x: 438,
-    y: 203,
+    lat: 52.3557,
+    lng: 4.8946,
     coords: "52.3557° N / 4.8946° E",
     context: "A 260-metre underground parking structure beneath the Boerenwetering canal, combining mobility infrastructure with the restoration of water and public space above.",
     field: "The project reads as a three-dimensional urban section: water above, infrastructure below and public life along both edges.",
@@ -26,8 +26,8 @@ const sites = [
     scale: "Neighbourhood",
     primary: "Community",
     lenses: ["Community", "Development"],
-    x: 452,
-    y: 166,
+    lat: 52.4008,
+    lng: 4.9085,
     coords: "52.4008° N / 4.9085° E",
     context: "A resident-led floating neighbourhood with 30 water plots and 46 homes, developed through a shared framework for energy, mobility and collective life.",
     field: "The shared jetty works simultaneously as street, threshold, service corridor and social room.",
@@ -44,8 +44,8 @@ const sites = [
     scale: "Building / district",
     primary: "Development",
     lenses: ["Development", "Community"],
-    x: 510,
-    y: 211,
+    lat: 52.3516,
+    lng: 5.0015,
     coords: "52.3516° N / 5.0015° E",
     context: "A mixed-use residential block at IJburg that extends over the water while keeping a public route through its courtyard and onto its roofscape.",
     field: "Its strongest move is not the silhouette alone, but the conversion of a private residential envelope into a publicly traversable edge.",
@@ -62,8 +62,8 @@ const sites = [
     scale: "Territory / heritage",
     primary: "Water security",
     lenses: ["Water security", "Governance"],
-    x: 558,
-    y: 315,
+    lat: 52.0676,
+    lng: 5.1759,
     coords: "52.0676° N / 5.1759° E",
     context: "A museum within Fort bij Vechten that interprets the New Dutch Waterline, where controlled inundation was used as territorial defence.",
     field: "The landscape is the primary defensive architecture; forts operate as nodes within a much larger hydrological system.",
@@ -80,8 +80,8 @@ const sites = [
     scale: "Public space",
     primary: "Infrastructure",
     lenses: ["Infrastructure", "Community"],
-    x: 249,
-    y: 502,
+    lat: 51.9282,
+    lng: 4.4762,
     coords: "51.9282° N / 4.4762° E",
     context: "A water square that temporarily stores stormwater in three basins while functioning as a sports, gathering and performance space in dry weather.",
     field: "Its blue basins make a normally hidden drainage function legible, inhabitable and open to appropriation.",
@@ -98,8 +98,8 @@ const sites = [
     scale: "Polder / landscape",
     primary: "Water security",
     lenses: ["Water security", "Governance"],
-    x: 328,
-    y: 555,
+    lat: 51.8825,
+    lng: 4.6333,
     coords: "51.8825° N / 4.6333° E",
     context: "A historic drainage landscape of canals, reservoirs, pumping stations and 19 windmills, developed to keep the Alblasserwaard polder habitable.",
     field: "The iconic windmills are only the most visible components of a continuous system of water levels, storage and collective maintenance.",
@@ -116,8 +116,8 @@ const sites = [
     scale: "City / lock",
     primary: "Infrastructure",
     lenses: ["Infrastructure", "Governance"],
-    x: 224,
-    y: 526,
+    lat: 51.9088,
+    lng: 4.4471,
     coords: "51.9088° N / 4.4471° E",
     context: "A working lock complex connecting Rotterdam's urban waterways while negotiating changing water levels, road crossings and daily boat traffic.",
     field: "Unlike monumental barriers, the lock reveals water management as a repetitive urban operation embedded in ordinary movement.",
@@ -134,8 +134,8 @@ const sites = [
     scale: "Delta / megastructure",
     primary: "Water security",
     lenses: ["Water security", "Governance", "Development"],
-    x: 92,
-    y: 492,
+    lat: 51.9538,
+    lng: 4.1638,
     coords: "51.9538° N / 4.1638° E",
     context: "An automatically controlled storm-surge barrier with two 210-metre gates, designed to protect South Holland while keeping the Nieuwe Waterweg open to shipping.",
     field: "The barrier is powerful because it normally remains absent: dormant machinery preserves both the port economy and the defensive threshold.",
@@ -150,13 +150,13 @@ const orderedSites = [...sites].sort((a, b) => Number(a.no) - Number(b.no));
 let activeLens = "All";
 let activeSiteId = orderedSites[0].id;
 let activeView = "map";
+let fieldMap = null;
+const fieldMarkerElements = new Map();
 
 const siteList = document.querySelector("#siteList");
-const mapMarkers = document.querySelector("#mapMarkers");
 const recordPanel = document.querySelector("#recordPanel");
 const filters = document.querySelector("#filters");
 const resultCount = document.querySelector("#resultCount");
-const routePath = document.querySelector("#routePath");
 const timelineTrack = document.querySelector("#timelineTrack");
 const indexBody = document.querySelector("#indexBody");
 const coordinateReadout = document.querySelector("#coordinateReadout");
@@ -171,13 +171,6 @@ function buildInterface() {
       <span><span class="site-name">${site.name}</span><span class="site-meta">${site.city} · ${site.primary}</span></span>
       <span class="site-arrow" aria-hidden="true">↗</span>
     </button>`).join("");
-  mapMarkers.innerHTML = orderedSites.map(site => `
-    <g class="map-marker" data-site="${site.id}" tabindex="0" role="button" aria-label="Open ${site.name}" transform="translate(${site.x} ${site.y})">
-      <circle class="marker-halo" r="19"></circle>
-      <circle class="marker-ring" r="14"></circle>
-      <text y=".5">${site.no}</text>
-    </g>`).join("");
-  routePath.setAttribute("d", `M ${orderedSites.map(site => `${site.x} ${site.y}`).join(" L ")}`);
   timelineTrack.innerHTML = orderedSites.map(site => `
     <button class="timeline-item" type="button" data-site="${site.id}">
       <span class="timeline-date">${site.date}</span>
@@ -190,6 +183,77 @@ function buildInterface() {
       <td>${site.no}</td><td>${site.name}</td><td>${site.city}</td><td>${site.scale}</td><td>${site.primary}</td>
       <td><button class="index-open" type="button" data-site="${site.id}" aria-label="Open ${site.name}">↗</button></td>
     </tr>`).join("");
+}
+
+function initFieldMap() {
+  const container = document.querySelector("#fieldMap");
+  if (!window.maplibregl) {
+    container.innerHTML = '<p class="map-error">The geographic basemap could not load. Field records remain available in the index.</p>';
+    return;
+  }
+
+  fieldMap = new maplibregl.Map({
+    container,
+    style: "https://tiles.openfreemap.org/styles/positron",
+    center: [4.67, 52.13],
+    zoom: 8.2,
+    minZoom: 7.3,
+    maxZoom: 16,
+    maxBounds: [[3.55, 51.55], [5.65, 52.75]],
+    dragRotate: false,
+    pitchWithRotate: false,
+    touchPitch: false,
+    attributionControl: true
+  });
+
+  fieldMap.addControl(new maplibregl.NavigationControl({showCompass: false, visualizePitch: false}), "bottom-right");
+  fieldMap.addControl(new maplibregl.ScaleControl({maxWidth: 90, unit: "metric"}), "bottom-left");
+
+  orderedSites.forEach(site => {
+    const marker = document.createElement("button");
+    marker.type = "button";
+    marker.className = "field-marker";
+    marker.dataset.site = site.id;
+    marker.setAttribute("aria-label", `Open ${site.name}`);
+    marker.innerHTML = `<span>${escapeHtml(site.no)}</span>`;
+    new maplibregl.Marker({element: marker, anchor: "center"})
+      .setLngLat([site.lng, site.lat])
+      .addTo(fieldMap);
+    fieldMarkerElements.set(site.id, marker);
+  });
+
+  fieldMap.on("load", () => {
+    const setPaint = (layerId, property, value) => {
+      try { fieldMap.setPaintProperty(layerId, property, value); } catch (_error) { /* Style layers vary by provider. */ }
+    };
+    const setLayout = (layerId, property, value) => {
+      try { fieldMap.setLayoutProperty(layerId, property, value); } catch (_error) { /* Style layers vary by provider. */ }
+    };
+
+    fieldMap.getStyle().layers.forEach(layer => {
+      const id = layer.id.toLowerCase();
+      if (id.includes("poi") || id.includes("housenumber") || id.includes("airport")) setLayout(layer.id, "visibility", "none");
+      if (layer.type === "background") setPaint(layer.id, "background-color", "#e8eae5");
+      if (layer.type === "symbol") {
+        setPaint(layer.id, "text-color", "#171a1b");
+        setPaint(layer.id, "text-halo-color", "#f2f2ed");
+        setPaint(layer.id, "text-halo-width", 1);
+      }
+    });
+    fitVisibleSites(orderedSites, 0);
+    renderRecord();
+  });
+}
+
+function fitVisibleSites(visible, duration = 500) {
+  if (!fieldMap || !fieldMap.loaded() || visible.length === 0) return;
+  const bounds = new maplibregl.LngLatBounds();
+  visible.forEach(site => bounds.extend([site.lng, site.lat]));
+  fieldMap.fitBounds(bounds, {
+    padding: {top: 68, right: 58, bottom: 78, left: 58},
+    maxZoom: 10.2,
+    duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : duration
+  });
 }
 
 function renderRecord() {
@@ -220,17 +284,27 @@ function applyFilter(lens) {
   if (!visible.some(site => site.id === activeSiteId)) activeSiteId = visible[0]?.id || orderedSites[0].id;
   document.querySelectorAll(".filter-button").forEach(button => button.classList.toggle("is-active", button.dataset.lens === activeLens));
   document.querySelectorAll(".site-card").forEach(card => { card.hidden = !visible.some(site => site.id === card.dataset.site); });
-  document.querySelectorAll(".map-marker").forEach(marker => marker.classList.toggle("is-filtered", !visible.some(site => site.id === marker.dataset.site)));
+  document.querySelectorAll(".field-marker").forEach(marker => marker.classList.toggle("is-filtered", !visible.some(site => site.id === marker.dataset.site)));
   document.querySelectorAll(".timeline-item").forEach(item => { item.hidden = !visible.some(site => site.id === item.dataset.site); });
   document.querySelectorAll("[data-row]").forEach(row => row.classList.toggle("is-filtered", !visible.some(site => site.id === row.dataset.row)));
   resultCount.textContent = `${String(visible.length).padStart(2, "0")} field records`;
   renderRecord();
+  fitVisibleSites(visible);
 }
 
 function selectSite(id, scrollOnMobile = false) {
   activeSiteId = id;
   renderRecord();
   if (activeView !== "map") switchView("map");
+  const site = sites.find(item => item.id === id);
+  if (fieldMap && site) {
+    fieldMap.flyTo({
+      center: [site.lng, site.lat],
+      zoom: Math.max(fieldMap.getZoom(), 9.6),
+      duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 550,
+      essential: true
+    });
+  }
   if (scrollOnMobile && window.matchMedia("(max-width: 640px)").matches) recordPanel.scrollIntoView({behavior: "smooth", block: "start"});
 }
 
@@ -238,9 +312,11 @@ function switchView(view) {
   activeView = view;
   document.querySelectorAll(".view-button").forEach(button => button.classList.toggle("is-active", button.dataset.view === view));
   document.querySelectorAll(".stage-view").forEach(panel => panel.classList.toggle("is-active", panel.dataset.panel === view));
+  if (view === "map" && fieldMap) requestAnimationFrame(() => fieldMap.resize());
 }
 
 buildInterface();
+initFieldMap();
 applyFilter("All");
 
 filters.addEventListener("click", event => {
@@ -255,13 +331,6 @@ document.addEventListener("click", event => {
   const target = event.target.closest("[data-site]");
   if (target) selectSite(target.dataset.site, true);
 });
-mapMarkers.addEventListener("keydown", event => {
-  if ((event.key === "Enter" || event.key === " ") && event.target.dataset.site) {
-    event.preventDefault();
-    selectSite(event.target.dataset.site, true);
-  }
-});
-
 const methodDialog = document.querySelector("#methodDialog");
 document.querySelector("#methodButton").addEventListener("click", () => methodDialog.showModal());
 document.querySelector("#closeMethod").addEventListener("click", () => methodDialog.close());
