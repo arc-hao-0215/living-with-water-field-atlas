@@ -187,27 +187,28 @@ function buildInterface() {
 
 function initFieldMap() {
   const container = document.querySelector("#fieldMap");
-  if (!window.maplibregl) {
+  if (!window.L) {
     container.innerHTML = '<p class="map-error">The geographic basemap could not load. Field records remain available in the index.</p>';
     return;
   }
 
-  fieldMap = new maplibregl.Map({
-    container,
-    style: "https://tiles.openfreemap.org/styles/positron",
-    center: [4.67, 52.13],
-    zoom: 8.2,
+  fieldMap = L.map(container, {
+    center: [52.13, 4.67],
+    zoom: 8,
     minZoom: 7.3,
-    maxZoom: 16,
-    maxBounds: [[3.55, 51.55], [5.65, 52.75]],
-    dragRotate: false,
-    pitchWithRotate: false,
-    touchPitch: false,
-    attributionControl: true
+    maxZoom: 18,
+    maxBounds: [[51.55, 3.55], [52.75, 5.65]],
+    zoomControl: false,
+    attributionControl: true,
+    preferCanvas: true
   });
 
-  fieldMap.addControl(new maplibregl.NavigationControl({showCompass: false, visualizePitch: false}), "bottom-right");
-  fieldMap.addControl(new maplibregl.ScaleControl({maxWidth: 90, unit: "metric"}), "bottom-left");
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(fieldMap);
+  L.control.zoom({position: "bottomright"}).addTo(fieldMap);
+  L.control.scale({position: "bottomleft", imperial: false, maxWidth: 90}).addTo(fieldMap);
 
   orderedSites.forEach(site => {
     const marker = document.createElement("button");
@@ -216,43 +217,29 @@ function initFieldMap() {
     marker.dataset.site = site.id;
     marker.setAttribute("aria-label", `Open ${site.name}`);
     marker.innerHTML = `<span>${escapeHtml(site.no)}</span>`;
-    new maplibregl.Marker({element: marker, anchor: "center"})
-      .setLngLat([site.lng, site.lat])
-      .addTo(fieldMap);
+    const icon = L.divIcon({
+      html: marker,
+      className: "field-marker-shell",
+      iconSize: [30, 30],
+      iconAnchor: [15, 15]
+    });
+    L.marker([site.lat, site.lng], {icon, keyboard: false}).addTo(fieldMap);
     fieldMarkerElements.set(site.id, marker);
   });
 
-  fieldMap.on("load", () => {
-    const setPaint = (layerId, property, value) => {
-      try { fieldMap.setPaintProperty(layerId, property, value); } catch (_error) { /* Style layers vary by provider. */ }
-    };
-    const setLayout = (layerId, property, value) => {
-      try { fieldMap.setLayoutProperty(layerId, property, value); } catch (_error) { /* Style layers vary by provider. */ }
-    };
-
-    fieldMap.getStyle().layers.forEach(layer => {
-      const id = layer.id.toLowerCase();
-      if (id.includes("poi") || id.includes("housenumber") || id.includes("airport")) setLayout(layer.id, "visibility", "none");
-      if (layer.type === "background") setPaint(layer.id, "background-color", "#e8eae5");
-      if (layer.type === "symbol") {
-        setPaint(layer.id, "text-color", "#171a1b");
-        setPaint(layer.id, "text-halo-color", "#f2f2ed");
-        setPaint(layer.id, "text-halo-width", 1);
-      }
-    });
-    fitVisibleSites(orderedSites, 0);
-    renderRecord();
-  });
+  fitVisibleSites(orderedSites, 0);
+  renderRecord();
 }
 
 function fitVisibleSites(visible, duration = 500) {
-  if (!fieldMap || !fieldMap.loaded() || visible.length === 0) return;
-  const bounds = new maplibregl.LngLatBounds();
-  visible.forEach(site => bounds.extend([site.lng, site.lat]));
+  if (!fieldMap || visible.length === 0) return;
+  const bounds = L.latLngBounds(visible.map(site => [site.lat, site.lng]));
   fieldMap.fitBounds(bounds, {
-    padding: {top: 68, right: 58, bottom: 78, left: 58},
-    maxZoom: 10.2,
-    duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : duration
+    paddingTopLeft: [58, 68],
+    paddingBottomRight: [58, 78],
+    maxZoom: 10,
+    animate: duration > 0 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    duration: duration / 1000
   });
 }
 
@@ -298,11 +285,9 @@ function selectSite(id, scrollOnMobile = false) {
   if (activeView !== "map") switchView("map");
   const site = sites.find(item => item.id === id);
   if (fieldMap && site) {
-    fieldMap.flyTo({
-      center: [site.lng, site.lat],
-      zoom: Math.max(fieldMap.getZoom(), 9.6),
-      duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 550,
-      essential: true
+    fieldMap.flyTo([site.lat, site.lng], Math.max(fieldMap.getZoom(), 10), {
+      animate: !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+      duration: .55
     });
   }
   if (scrollOnMobile && window.matchMedia("(max-width: 640px)").matches) recordPanel.scrollIntoView({behavior: "smooth", block: "start"});
@@ -312,7 +297,7 @@ function switchView(view) {
   activeView = view;
   document.querySelectorAll(".view-button").forEach(button => button.classList.toggle("is-active", button.dataset.view === view));
   document.querySelectorAll(".stage-view").forEach(panel => panel.classList.toggle("is-active", panel.dataset.panel === view));
-  if (view === "map" && fieldMap) requestAnimationFrame(() => fieldMap.resize());
+  if (view === "map" && fieldMap) requestAnimationFrame(() => fieldMap.invalidateSize());
 }
 
 buildInterface();
