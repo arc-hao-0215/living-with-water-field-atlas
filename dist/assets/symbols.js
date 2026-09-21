@@ -1,0 +1,27 @@
+/* Small navigation glyphs, not project drawings. Same symbol in map and index. */
+window.atlasSymbols = {
+  waterlinie: ['Fort + floodplain', 'M3 21h26M7 21V11h6V7h6v4h6v10M12 21v-5h8v5M3 26h26'],
+  oudegracht: ['Wharf section', 'M3 7h7v10h6v8h13M3 11h3v10h6v7M19 20h10M19 24h10'],
+  'canal-ring': ['Concentric canals', 'M5 24a11 11 0 0 1 22 0M9 24a7 7 0 0 1 14 0M13 24a3 3 0 0 1 6 0M16 4v6M4 12l4 3m16 0 4-3'],
+  'albert-cuyp': ['Sub-canal parking', 'M3 7q3-3 6 0t6 0t6 0t8 0M5 12v15h22V12M5 20h22M11 15h3m4 0h3M11 24h3m4 0h3'],
+  'waterbuurt-west': ['Floating dwellings', 'M4 19V9h9v10M19 19V5h9v14M2 23h28M7 27h5m8 0h5M8 9V5m16 0V2'],
+  schoonschip: ['Shared jetty', 'M16 3v26M5 6h7v7H5zM20 8h7v7h-7zM5 20h7v7H5zM20 21h7v7h-7zM12 10h4m0 2h4m-8 11h4m0 1h4'],
+  sluishuis: ['Open courtyard', 'M4 25V9l12-5 12 5v16h-7V14l-5-2-5 2v11zM4 25h7m10 0h7'],
+  'mvrdv-exchange': ['Design forum', 'M5 5h22v22H5zM5 12h22M12 12v15m8-15v7h7M15 20h3m-3 4h3'],
+  'floating-office': ['Floating timber frame', 'M4 21V10h24v11M3 10l13-6 13 6M10 10v11m6-11v11m6-11v11M2 23h28l-4 5H6z'],
+  'posadmaxwan-exchange': ['Regional connections', 'M5 5h6v6H5zM21 5h6v6h-6zM13 22h6v6h-6zM11 8h10M8 11l8 11 8-11'],
+  'fenix-rijnhaven': ['Warehouse + tornado', 'M4 27V13h24v14M9 17v10m14-10v10M14 27c15-8-12-10 3-17s-3-8-3-8'],
+  'delft-canal': ['Canal bridge', 'M11 3v9m0 8v9M21 3v9m0 8v9M3 19v-7h26v7M3 19h6q7-10 14 0h6'],
+  'tu-delft-exchange': ['Learning commons', 'M16 8C12 4 7 4 3 5v21c5-1 9-1 13 2 4-3 8-3 13-2V5c-4-1-9-1-13 3zm0 0v20M7 10l5 1m8 0 5-1M7 15l5 1m8 0 5-1'],
+  kinderdijk: ['Wind-driven drainage', 'M11 28l3-14h4l3 14M16 14V3m0 11 10-7m-10 7-10-7m10 7-7 7m7-7 7 7M3 29h26'],
+  wisboomgemaal: ['Pump wheel', 'M12 8a9 9 0 1 1-5 9M16 8v18M7 17h18M10 11l12 12m0-12L10 23M3 7h9V3M3 7v10h4'],
+  benthemplein: ['Three retention basins', 'M3 5h10v7H3zM19 5h10v7H19zM9 20h14v9H9zM8 12v4h8v4m8-8v4h-8'],
+  maeslantkering: ['Paired sector gates', 'M4 5v22M28 5v22M4 8l11 14M28 8 17 22M4 21q4-1 6-5m18 5q-4-1-6-5M13 28h6'],
+  parksluizen: ['Lock chamber', 'M4 4v24M28 4v24M4 9l12 5 12-5M4 21l12-5 12 5M10 4h12M10 28h12'],
+  'nijmegen': ['River bypass', 'M3 7c8 10 18-8 26 2M3 23c8 10 18-8 26 2M5 9c2 16 20-8 22 14M16 4v24'],
+  'sand-motor': ['Sand peninsula', 'M5 3c15 9-5 15 3 26M6 8c23-5 26 18 3 14M21 3l6 4-6 4M18 27h11'],
+  'eendragtspolder': ['Reservoir + rowing', 'M3 5h26v22H3zM8 10h16M8 16h16M8 22h16M16 5v22'],
+  dakpark: ['Park over programme', 'M3 18l9-10h17M5 18h24v10H5zM11 18v10m8-10v10M15 8V4m9 4V4'],
+  waterdunen: ['Tidal landscape', 'M3 8c8-7 10 14 26 0M3 16c8-7 10 14 26 0M3 24c8-7 10 14 26 0M23 3v26'],
+  'marker-wadden': ['Constructed archipelago', 'M4 9l7-5 5 5-6 5zM19 9l8-2 2 7-7 3zM10 20l9-3 4 8-10 4z']
+};

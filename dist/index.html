@@ -13,6 +13,8 @@
     <link href="./assets/vendor/leaflet.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/styles.css" />
     <script src="./assets/vendor/leaflet.js"></script>
+    <script src="./assets/symbols.js" defer></script>
+    <script src="./assets/research.js" defer></script>
     <script src="./assets/script.js" defer></script>
   </head>
   <body>
@@ -51,8 +53,13 @@
       <section class="atlas-workspace">
         <aside class="case-rail" aria-label="Field sites">
           <div class="rail-heading">
-            <span>Field records</span>
-            <span>01–18</span>
+            <span>Research sites</span>
+            <span id="railCount"></span>
+          </div>
+          <div class="status-filters" role="group" aria-label="Visit status">
+            <button type="button" data-status="all" class="is-active" aria-pressed="true">All</button>
+            <button type="button" data-status="visited" aria-pressed="false"><i class="legend-dot"></i>Visited</button>
+            <button type="button" data-status="suggested" aria-pressed="false"><i class="legend-dot suggested"></i>To study</button>
           </div>
           <div id="siteList" class="site-list"></div>
         </aside>
@@ -60,13 +67,14 @@
         <section class="stage" aria-label="Interactive research atlas">
           <div class="stage-view is-active" id="mapView" data-panel="map">
             <div class="map-topline">
-              <span>Western Netherlands / Geographic field index</span>
+              <span>Netherlands / Water atlas</span>
               <div class="map-legend" aria-label="Map legend">
-                <span><i class="legend-dot"></i> Field site</span>
+                <span><i class="legend-dot"></i> Visited</span>
+                <span><i class="legend-dot suggested"></i> To study</span>
               </div>
             </div>
             <div class="map-canvas" id="mapCanvas">
-              <div id="fieldMap" class="field-map" role="application" aria-label="Interactive geographic map of eighteen field sites in the western Netherlands"></div>
+              <div id="fieldMap" class="field-map" role="application" aria-label="Interactive map of visited and suggested research sites in the Netherlands"></div>
               <div class="map-folio" aria-hidden="true">
                 <span>NL / 52°N</span>
                 <strong>WATER SYSTEMS</strong>
@@ -74,33 +82,33 @@
               </div>
               <div class="north-arrow" aria-hidden="true"><span>N</span><i>↑</i></div>
               <div class="coordinate-readout" id="coordinateReadout">52.3557° N / 4.8946° E</div>
-              <div class="map-instruction">Select a numbered site to open its field record.</div>
+              <div class="map-instruction">Each symbol identifies a site. Select it to explore.</div>
             </div>
           </div>
 
-          <div class="stage-view timeline-view" id="timelineView" data-panel="timeline">
+          <div class="stage-view timeline-view" id="timelineView" data-panel="timeline" hidden>
             <div class="timeline-header">
               <span>02–13 September 2026</span>
               <h2>Eleven days across three systems of water.</h2>
-              <p>From national defence to civic space and collective housing.</p>
+              <p>Visited sites only. Further research locations appear in Map and Index.</p>
             </div>
             <div class="timeline-track" id="timelineTrack"></div>
           </div>
 
-          <div class="stage-view index-view" id="indexView" data-panel="index">
+          <div class="stage-view index-view" id="indexView" data-panel="index" hidden>
             <div class="index-heading">
-              <span>Field index</span>
-              <p>Sort the research by place, scale and primary lens.</p>
+              <span>Research index</span>
+              <p>Visited sites and further research, by place and scale.</p>
             </div>
             <div class="index-table-wrap">
               <table>
                 <thead>
                   <tr>
-                    <th scope="col">No.</th>
+                    <th scope="col">Symbol</th>
                     <th scope="col">Case</th>
                     <th scope="col">City</th>
                     <th scope="col">Scale</th>
-                    <th scope="col">Lens</th>
+                    <th scope="col">Status / Lens</th>
                     <th scope="col"><span class="sr-only">Open</span></th>
                   </tr>
                 </thead>
@@ -137,9 +145,14 @@
             <li><span>02</span><strong>Separate</strong><p>Keep verified context, field reading and research interpretation distinct.</p></li>
             <li><span>03</span><strong>Connect</strong><p>Trace how design decisions move between governance, development and daily life.</p></li>
           </ol>
-          <p class="method-note">The public atlas contains edited research notes, not raw interview transcripts or private correspondence.</p>
+          <p class="method-note">Cyan symbols identify visited sites. Amber symbols identify suggested locations that were not visited on this trip. Their readings are desk research, not field observations. Published drawings retain their original credits and link to their source; historic maps and practice references are identified separately. The public atlas does not contain raw interview transcripts or private correspondence.</p>
         </div>
       </div>
+    </dialog>
+    <dialog class="drawing-dialog" id="drawingDialog" aria-labelledby="drawingTitle">
+      <div class="dialog-header"><span id="drawingTitle">Published drawing</span><button class="icon-button" id="closeDrawing" type="button" aria-label="Close drawing">×</button></div>
+      <div class="drawing-viewport"><img id="drawingImage" alt="" /></div>
+      <div class="drawing-details"><p id="drawingCredit"></p><a id="drawingSource" target="_blank" rel="noreferrer">View source ↗</a><a id="drawingOriginal" target="_blank" rel="noreferrer">Open full-size image ↗</a></div>
     </dialog>
   </body>
 </html>
