@@ -217,7 +217,7 @@ function renderDrawings(site) {
         <span class="enlarge-label">Enlarge ↗</span>
       </button>
       <figcaption><span class="drawing-type">${escapeHtml(drawing.type)}</span><strong>${escapeHtml(drawing.title)}</strong><p>${escapeHtml(drawing.note || "")}</p><a href="${drawing.source}" target="_blank" rel="noreferrer">${escapeHtml(drawing.credit)} ↗</a></figcaption>
-    </figure>` : `<article class="drawing-document"><span class="drawing-type">${escapeHtml(drawing.type)}</span><h3>${escapeHtml(drawing.title)}</h3><p>${escapeHtml(drawing.note)}</p><a href="${drawing.source}" target="_blank" rel="noreferrer">Open original document ↗</a><small>${escapeHtml(drawing.credit)}</small></article>`).join("")}</section>`;
+    </figure>` : `<article class="drawing-document"><span class="drawing-type">${escapeHtml(drawing.type)}</span><h3>${escapeHtml(drawing.title)}</h3><p>${escapeHtml(drawing.note)}</p><a href="${drawing.original || drawing.source}" target="_blank" rel="noreferrer">Open original document ↗</a><small>${escapeHtml(drawing.credit)}</small></article>`).join("")}</section>`;
 }
 
 function buildInterface() {

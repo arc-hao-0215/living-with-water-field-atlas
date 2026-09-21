@@ -23,5 +23,9 @@ window.atlasSymbols = {
   'eendragtspolder': ['Reservoir + rowing', 'M3 5h26v22H3zM8 10h16M8 16h16M8 22h16M16 5v22'],
   dakpark: ['Park over programme', 'M3 18l9-10h17M5 18h24v10H5zM11 18v10m8-10v10M15 8V4m9 4V4'],
   waterdunen: ['Tidal landscape', 'M3 8c8-7 10 14 26 0M3 16c8-7 10 14 26 0M3 24c8-7 10 14 26 0M23 3v26'],
-  'marker-wadden': ['Constructed archipelago', 'M4 9l7-5 5 5-6 5zM19 9l8-2 2 7-7 3zM10 20l9-3 4 8-10 4z']
+  'marker-wadden': ['Constructed archipelago', 'M4 9l7-5 5 5-6 5zM19 9l8-2 2 7-7 3zM10 20l9-3 4 8-10 4z'],
+  maasbommel: ['Amphibious home + guide posts', 'M5 4v24M27 4v24M9 16V9l7-5 7 5v7zM8 20h16M12 24l4-4 4 4M16 20v9M2 17h5m18 0h5'],
+  katwijk: ['Dune + hidden dyke', 'M2 23c6 0 7-15 13-15s7 15 15 15M9 23l7-12 7 12M11 24v5h11v-5M3 28h4m19 0h4'],
+  overdiep: ['Farm on a raised mound', 'M2 25h5l5-8h9l5 8h4M12 17V9l5-4 5 4v8M3 29h26M2 13h5m18 0h5'],
+  sponge: ['Rain + living soil', 'M7 3v4m9-4v4m9-4v4M3 12h26v16H3zM8 17h1m6 0h1m6 0h1M10 23h1m8 0h1M16 9v4m-3-3 3 3 3-3']
 };

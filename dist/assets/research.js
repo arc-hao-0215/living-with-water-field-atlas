@@ -332,6 +332,126 @@ window.atlasResearch = {
         "original": "https://whc.unesco.org/document/101347",
         "note": "Historic district documentation for the pumping station’s setting. A verified Wisboom building plan and section are still to be added."
       }
+    ],
+    "maasbommel": [
+      {
+        "image": "https://urbangreenbluegrids.com/uploads/Amfibiewoningen-Maasbommel-004-Factor-Architecten-bv-tiff1-950x311.jpg",
+        "title": "Permanently floating home: section",
+        "type": "Building section",
+        "credit": "Factor Architecten · via Urban Green-blue Grids",
+        "source": "https://urbangreenbluegrids.com/projects/amphibious-homes-maasbommel-the-netherlands/",
+        "original": "https://urbangreenbluegrids.com/uploads/Amfibiewoningen-Maasbommel-004-Factor-Architecten-bv-tiff1-950x311.jpg",
+        "note": "Published architect’s section. Compare the floating base with the amphibious configuration below."
+      },
+      {
+        "image": "https://urbangreenbluegrids.com/uploads/Amfibiewoningen-Maasbommel-004-Factor-Architecten-bv-tiff2-950x251.jpg",
+        "title": "Amphibious home: ground and flood levels",
+        "type": "Building section",
+        "credit": "Factor Architecten · via Urban Green-blue Grids",
+        "source": "https://urbangreenbluegrids.com/projects/amphibious-homes-maasbommel-the-netherlands/",
+        "original": "https://urbangreenbluegrids.com/uploads/Amfibiewoningen-Maasbommel-004-Factor-Architecten-bv-tiff2-950x251.jpg",
+        "note": "Published architect’s section showing the dwelling, guidance posts and sloping ground."
+      }
+    ],
+    "katwijk": [
+      {
+        "image": "https://www.okra.nl/wp-content/uploads/2023/06/okra-katwijk-kustzone-5-1-976x702.jpg",
+        "title": "Dyke, dunes and parking: spatial integration",
+        "type": "Axonometric design visualisation",
+        "credit": "OKRA",
+        "source": "https://www.okra.nl/project/katwijk-coastal-defence/",
+        "original": "https://www.okra.nl/wp-content/uploads/2023/06/okra-katwijk-kustzone-5-1-976x702.jpg",
+        "note": "Original design visualisation of the coastal section; not a measured construction drawing."
+      },
+      {
+        "image": "https://www.okra.nl/wp-content/uploads/2023/06/okra-katwijk-kustzone-6-scaled.jpg",
+        "title": "Town-to-beach landscape layout",
+        "type": "Landscape plan / design illustration",
+        "credit": "OKRA",
+        "source": "https://www.okra.nl/project/katwijk-coastal-defence/",
+        "original": "https://www.okra.nl/wp-content/uploads/2023/06/okra-katwijk-kustzone-6-scaled.jpg",
+        "note": "Original published overhead drawing of the linear coastal landscape."
+      }
+    ],
+    "overdiep": [
+      {
+        "image": "https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/08/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-Boerdereiland-Onix-architecten-panelen-profiel.jpg",
+        "title": "Farm mound above the floodable landscape",
+        "type": "Profile / design visualisation",
+        "credit": "Onix architects · via BoschSlabbers",
+        "source": "https://www.boschslabbers.nl/en/project/overdiepse-polder/",
+        "original": "https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/08/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-Boerdereiland-Onix-architecten-panelen-profiel.jpg",
+        "note": "Authored design sheet combining a profile and a flood-scenario rendering; not a photograph of a flood."
+      },
+      {
+        "image": "https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/08/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-kaarten-vergelijk-stroom.jpg",
+        "title": "River and polder at different water levels",
+        "type": "Flood scenario analysis",
+        "credit": "BoschSlabbers",
+        "source": "https://www.boschslabbers.nl/en/project/overdiepse-polder/",
+        "original": "https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/08/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-kaarten-vergelijk-stroom.jpg",
+        "note": "Original diagram sequence comparing water levels and the role of the floodable polder."
+      },
+      {
+        "image": "https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/08/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-concept.jpg",
+        "title": "Upper mound, lower mound and farmyard",
+        "type": "Concept axonometrics",
+        "credit": "BoschSlabbers",
+        "source": "https://www.boschslabbers.nl/en/project/overdiepse-polder/",
+        "original": "https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/08/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-concept.jpg",
+        "note": "Original design sequence explaining the organisation of a farm mound."
+      }
+    ],
+    "eendragtspolder": [
+      {
+        "title": "Eendragtspolder: storage and operating principles",
+        "type": "Official project documentation",
+        "credit": "Hoogheemraadschap van Schieland en de Krimpenerwaard",
+        "source": "https://www.schielandendekrimpenerwaard.nl/wat-doen-we/zorg-voor-voldoende-water/waterberging-eendragtspolder/",
+        "original": "https://www.schielandendekrimpenerwaard.nl/wat-doen-we/zorg-voor-voldoende-water/waterberging-eendragtspolder/",
+        "note": "The water authority explains inflow, drainage, rowing and flood storage. This is a text-based technical source; a verified original engineering drawing is not yet included."
+      }
+    ],
+    "dakpark": [
+      {
+        "image": "https://www.santenco.nl/wp-content/uploads/2016/09/buro-sant-en-co-landschapsarchitectuur-dakpark-rotterdam-ontwerp.jpg",
+        "title": "Dakpark: paths, planting and neighbourhood connections",
+        "type": "Landscape plan",
+        "credit": "Buro Sant en Co",
+        "source": "https://www.santenco.nl/portfolio_page/dakpark/",
+        "original": "https://www.santenco.nl/wp-content/uploads/2016/09/buro-sant-en-co-landschapsarchitectuur-dakpark-rotterdam-ontwerp.jpg",
+        "note": "Original landscape plan from the designer’s project publication."
+      }
+    ],
+    "sponge": [
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/5f082078d610926644d22e00/1594738239119-UZO1AM2QY531LOS273N5/Sponge+garden_Concept.jpg",
+        "title": "Collect, store, return",
+        "type": "Water cycle analysis",
+        "credit": "De Urbanisten",
+        "source": "https://www.urbanisten.nl/work/sponge-garden-dhkxw",
+        "original": "https://images.squarespace-cdn.com/content/v1/5f082078d610926644d22e00/1594738239119-UZO1AM2QY531LOS273N5/Sponge+garden_Concept.jpg",
+        "note": "The practice’s own diagram of the sponge principle."
+      },
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/5f082078d610926644d22e00/57732181-cd92-4013-8bb8-fc30840c91e8/04.+three+main+segments.jpg",
+        "title": "Three experimental landscape segments",
+        "type": "Systems plan / analysis",
+        "credit": "De Urbanisten",
+        "source": "https://www.urbanisten.nl/work/sponge-garden-dhkxw",
+        "original": "https://images.squarespace-cdn.com/content/v1/5f082078d610926644d22e00/57732181-cd92-4013-8bb8-fc30840c91e8/04.+three+main+segments.jpg",
+        "note": "Original diagram locating the garden’s wadi, raised gardens and soil test areas."
+      }
+    ],
+    "waterdunen": [
+      {
+        "title": "Waterdunen: official area map",
+        "type": "Site map / PDF",
+        "credit": "Het Zeeuwse Landschap",
+        "source": "https://www.hetzeeuwselandschap.nl/natuurgebieden/waterdunen",
+        "original": "https://www.hetzeeuwselandschap.nl/sites/default/files/2026-04/Gebiedskaart%20Waterdunen.pdf",
+        "note": "The nature manager’s published area map, linked from its current site. A visitor and habitat map, not an architectural floor plan."
+      }
     ]
   },
   "suggested": [
@@ -466,6 +586,314 @@ window.atlasResearch = {
       "imageCredit": "ChristiaanPR · CC BY-SA 4.0",
       "imageSource": "https://commons.wikimedia.org/wiki/File:Marker_Wadden_2018_05_12.jpg",
       "source": "https://www.natuurmonumenten.nl/projecten/marker-wadden"
+    },
+    {
+      "id": "maasbommel",
+      "no": "22",
+      "status": "suggested",
+      "name": "Maasbommel Amphibious Housing",
+      "city": "Maasbommel",
+      "date": "",
+      "scale": "Building / floodplain",
+      "primary": "Development",
+      "lenses": [
+        "Development",
+        "Water security",
+        "Governance"
+      ],
+      "lat": 51.817,
+      "lng": 5.535,
+      "coords": "Approx. 51.817° N / 5.535° E",
+      "context": "A riverside development combines amphibious houses that rest on the ground and rise during floods with permanently floating homes. Guide posts constrain movement while flexible services accommodate changing water levels.",
+      "field": "Compare with Waterbuurt West and Schoonschip: adapting a building to episodic inundation changes its relationship to the ground, utilities and development permissions.",
+      "insight": "How do flood-adaptive foundations, service connections and land-use classifications shape the feasibility of amphibious housing?",
+      "facts": [
+        [
+          "Housing",
+          "32 amphibious + 14 floating"
+        ],
+        [
+          "Design",
+          "Factor Architecten / Dura Vermeer"
+        ],
+        [
+          "Mechanism",
+          "Guided buoyancy"
+        ],
+        [
+          "Record",
+          "Not visited"
+        ]
+      ],
+      "image": "https://urbangreenbluegrids.com/uploads/Amfibiewoningen-Maasbommel-002-Duravermeer-1300x650.jpg",
+      "imageAlt": "Amphibious and floating houses along the waterfront at Maasbommel",
+      "imageCredit": "Dura Vermeer · via Urban Green-blue Grids",
+      "imageSource": "https://urbangreenbluegrids.com/projects/amphibious-homes-maasbommel-the-netherlands/",
+      "source": "https://urbangreenbluegrids.com/projects/amphibious-homes-maasbommel-the-netherlands/"
+    },
+    {
+      "id": "katwijk",
+      "no": "23",
+      "status": "suggested",
+      "name": "Katwijk Coastal Defence",
+      "city": "Katwijk",
+      "date": "",
+      "scale": "Coast / infrastructure / public space",
+      "primary": "Infrastructure",
+      "lenses": [
+        "Infrastructure",
+        "Water security",
+        "Development"
+      ],
+      "lat": 52.203,
+      "lng": 4.393,
+      "coords": "Approx. 52.203° N / 4.393° E",
+      "context": "A reinforced dune landscape conceals a dyke and a parking garage while maintaining connections between the town and beach. OKRA developed the landscape with engineering and architectural partners.",
+      "field": "Compare with Albert Cuypgarage: parking becomes part of a larger public landscape. Here the same section must also accommodate coastal defence and access to the beach.",
+      "insight": "How can coastal protection, parking and public space share a section without making future maintenance or adaptation harder?",
+      "facts": [
+        [
+          "Landscape",
+          "OKRA"
+        ],
+        [
+          "Completed",
+          "2015"
+        ],
+        [
+          "Strategy",
+          "Dyke in dune"
+        ],
+        [
+          "Record",
+          "Not visited"
+        ]
+      ],
+      "image": "https://www.okra.nl/wp-content/uploads/2023/06/20250705_KustwerkKatwijk_DJI_0145_mvd-1920x1280.jpg",
+      "imageAlt": "Dune paths, coastal public space and the town edge at Katwijk",
+      "imageCredit": "Melle van Dijk · via OKRA",
+      "imageSource": "https://www.okra.nl/project/katwijk-coastal-defence/",
+      "source": "https://www.okra.nl/project/katwijk-coastal-defence/"
+    },
+    {
+      "id": "overdiep",
+      "no": "24",
+      "status": "suggested",
+      "name": "Overdiepse Polder",
+      "city": "Waspik / Waalwijk",
+      "date": "",
+      "scale": "Agricultural territory / river",
+      "primary": "Governance",
+      "lenses": [
+        "Governance",
+        "Water security",
+        "Community"
+      ],
+      "lat": 51.715,
+      "lng": 4.937,
+      "coords": "Approx. 51.715° N / 4.937° E",
+      "context": "Lowering a river dyke allows the polder to carry floodwater. Eight farms were relocated onto raised mounds along a new inland dyke, retaining agriculture within a floodable landscape.",
+      "field": "Compare with Waterliniemuseum and Spiegelwaal: planned inundation becomes a contemporary land-use agreement. The residents’ mound proposal makes participation central to the physical design.",
+      "insight": "Who carries the costs of relocation, interrupted production and long-term maintenance when farmland also provides flood protection?",
+      "facts": [
+        [
+          "Landscape",
+          "BoschSlabbers"
+        ],
+        [
+          "Farm mounds",
+          "8"
+        ],
+        [
+          "Project period",
+          "2006–2015"
+        ],
+        [
+          "Record",
+          "Not visited"
+        ]
+      ],
+      "image": "https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/06/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-oude-bergsche-maas-vogelvlucht-YourCaptain-01.jpg",
+      "imageAlt": "Aerial view of the Overdiepse Polder, river and agricultural land",
+      "imageCredit": "YourCaptain aerial photography · via BoschSlabbers",
+      "imageSource": "https://www.boschslabbers.nl/en/project/overdiepse-polder/",
+      "source": "https://www.boschslabbers.nl/en/project/overdiepse-polder/"
+    },
+    {
+      "id": "eendragtspolder",
+      "no": "25",
+      "status": "suggested",
+      "name": "Eendragtspolder / Rowing Basin",
+      "city": "Zevenhuizen",
+      "date": "",
+      "scale": "Regional reservoir / recreation",
+      "primary": "Water security",
+      "lenses": [
+        "Water security",
+        "Infrastructure",
+        "Community"
+      ],
+      "lat": 51.984,
+      "lng": 4.564,
+      "coords": "Approx. 51.984° N / 4.564° E",
+      "context": "A recreation landscape and rowing course also provide temporary storage for up to four million cubic metres of water when the Rotte system faces high water levels. The regional water authority controls inflow and drainage.",
+      "field": "Compare with Benthemplein: the principle of everyday use plus temporary storage expands from a neighbourhood square to a regional landscape with sport and habitat.",
+      "insight": "How are sports schedules, ecology and public access coordinated with the water authority’s need to use emergency storage?",
+      "facts": [
+        [
+          "Storage",
+          "4 million m³"
+        ],
+        [
+          "Water authority",
+          "HHSK"
+        ],
+        [
+          "Everyday use",
+          "Rowing / nature / recreation"
+        ],
+        [
+          "Record",
+          "Not visited"
+        ]
+      ],
+      "image": "https://fd-cdn.nl/12602-hhsk-website-prd/media/images/Eendragtspolder.2e16d0ba.fill-1290x946.format-webp.webp",
+      "imageAlt": "Water and reed habitat in the Eendragtspolder",
+      "imageCredit": "HHSK · official project photograph",
+      "imageSource": "https://www.schielandendekrimpenerwaard.nl/wat-doen-we/zorg-voor-voldoende-water/waterberging-eendragtspolder/",
+      "source": "https://www.schielandendekrimpenerwaard.nl/wat-doen-we/zorg-voor-voldoende-water/waterberging-eendragtspolder/"
+    },
+    {
+      "id": "dakpark",
+      "no": "26",
+      "status": "suggested",
+      "name": "Dakpark Rotterdam",
+      "city": "Rotterdam",
+      "date": "",
+      "scale": "Building / dyke / neighbourhood park",
+      "primary": "Community",
+      "lenses": [
+        "Community",
+        "Development",
+        "Infrastructure"
+      ],
+      "lat": 51.913,
+      "lng": 4.432,
+      "coords": "Approx. 51.913° N / 4.432° E",
+      "context": "A public park sits above retail and service space beside an existing flood defence. The design grew from negotiations between residents, the municipality and development interests, bringing a neighbourhood park into a former railway area.",
+      "field": "Compare with Albert Cuypgarage and Benthemplein: a thick urban section combines real estate, public amenity, flood defence and water-buffering soil. Community involvement extends into park management.",
+      "insight": "How can access, structural maintenance, planting and water storage be governed across public park space and the commercial building below?",
+      "facts": [
+        [
+          "Landscape",
+          "Buro Sant en Co"
+        ],
+        [
+          "Park area",
+          "Approx. 8 ha"
+        ],
+        [
+          "Spatial strategy",
+          "Park above retail"
+        ],
+        [
+          "Record",
+          "Not visited"
+        ]
+      ],
+      "image": "https://www.santenco.nl/wp-content/uploads/2016/09/buro-sant-en-co-landschapsarchitectuur-dakpark-rotterdam-ontwerp-luchtfoto-1.jpg",
+      "imageAlt": "Aerial view of Dakpark and the commercial development below",
+      "imageCredit": "Buro Sant en Co · published project photograph",
+      "imageSource": "https://www.santenco.nl/portfolio_page/dakpark/",
+      "source": "https://www.santenco.nl/portfolio_page/dakpark/"
+    },
+    {
+      "id": "sponge",
+      "no": "27",
+      "status": "suggested",
+      "name": "Sponge Garden / Sponstuin",
+      "city": "Rotterdam",
+      "date": "",
+      "scale": "Garden / soil / urban water",
+      "primary": "Community",
+      "lenses": [
+        "Community",
+        "Infrastructure",
+        "Water security"
+      ],
+      "lat": 51.907,
+      "lng": 4.428,
+      "coords": "Approx. 51.907° N / 4.428° E",
+      "context": "De Urbanisten’s living laboratory explores how rainwater, soil composition, vegetation and maintenance work together. Its planted test areas demonstrate collecting, storing and gradually returning water to the environment.",
+      "field": "Compare with Benthemplein: the focus shifts from open water storage to the performance of living soil, planting and ongoing care. The small scale makes maintenance and seasonal change especially visible.",
+      "insight": "Which soil and planting combinations continue to retain water and support biodiversity under real maintenance conditions?",
+      "facts": [
+        [
+          "Practice",
+          "De Urbanisten"
+        ],
+        [
+          "Setting",
+          "Voedseltuin / M4H"
+        ],
+        [
+          "Approach",
+          "Living laboratory"
+        ],
+        [
+          "Record",
+          "Not visited"
+        ]
+      ],
+      "image": "https://images.squarespace-cdn.com/content/v1/5f082078d610926644d22e00/56b0dfc4-19ad-403a-812f-8802bcde3598/WHURB85414crB.jpg?format=1500w",
+      "imageAlt": "Planted experimental landscape in the Sponge Garden",
+      "imageCredit": "De Urbanisten · published project photograph",
+      "imageSource": "https://www.urbanisten.nl/work/sponge-garden-dhkxw",
+      "source": "https://www.urbanisten.nl/work/sponge-garden-dhkxw"
+    },
+    {
+      "id": "waterdunen",
+      "no": "28",
+      "status": "suggested",
+      "name": "Waterdunen",
+      "city": "Breskens / Groede",
+      "date": "",
+      "scale": "Coast / tidal habitat / recreation",
+      "primary": "Water security",
+      "lenses": [
+        "Water security",
+        "Development",
+        "Governance"
+      ],
+      "lat": 51.402,
+      "lng": 3.515,
+      "coords": "Approx. 51.402° N / 3.515° E",
+      "context": "A coastal landscape combines strengthened defences, managed tidal exchange, bird habitat and recreation. The project brings together public authorities, a nature organisation and a recreation operator.",
+      "field": "Compare with Marker Wadden and Maeslantkering: controlled exchange with the sea creates habitat behind coastal defences while tourism introduces another land-use and management agenda.",
+      "insight": "How are tidal operation, habitat targets, visitor access and recreation development balanced over the life of the project?",
+      "facts": [
+        [
+          "Landscape",
+          "Tidal creeks / dunes"
+        ],
+        [
+          "Area",
+          "Approx. 350 ha"
+        ],
+        [
+          "Research focus",
+          "Ecology and development"
+        ],
+        [
+          "Record",
+          "Not visited"
+        ]
+      ],
+      "image": "https://www.hetzeeuwselandschap.nl/sites/default/files/styles/full_page_hero_desktop/public/2022-09/DJI_0305-Pano_0.jpg?h=920929c4&itok=VjhA4OdJ",
+      "imageAlt": "Waterdunen tidal landscape viewed inland from the coast",
+      "imageCredit": "Het Zeeuwse Landschap · published project photograph",
+      "imageSource": "https://www.hetzeeuwselandschap.nl/natuurgebieden/waterdunen",
+      "source": "https://www.hetzeeuwselandschap.nl/natuurgebieden/waterdunen"
     }
   ]
 };

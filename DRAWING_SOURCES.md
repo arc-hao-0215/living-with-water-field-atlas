@@ -105,3 +105,54 @@ Historical reconstructions, design-stage predictions, practice research and dist
 Spiegelwaal, Sand Motor and Marker Wadden are desk research suggestions, not claimed visits. They have separate colours, shapes and status labels and never appear as field visits in the timeline.
 
 New photography: Siebe Swart via H+N+S (Spiegelwaal); Rijkswaterstaat / Joop van Houdt via H+N+S (Sand Motor); ChristiaanPR via Wikimedia Commons (Marker Wadden, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)). All are resized for web display.
+
+## Further research expansion
+
+Seven additional desk-research records, all marked Not visited, with blank visit dates and amber symbols. Coordinates indicate approximate site centres, not surveyed entrances. Comparison readings and research questions are editorial interpretations. The additional images are served from the credited publisher URLs; the original 30 locally hosted previews are unchanged.
+
+### Maasbommel Amphibious Housing
+
+- [Project source](https://urbangreenbluegrids.com/projects/amphibious-homes-maasbommel-the-netherlands/).
+- Photograph: Dura Vermeer · via Urban Green-blue Grids. [Asset](https://urbangreenbluegrids.com/uploads/Amfibiewoningen-Maasbommel-002-Duravermeer-1300x650.jpg).
+- **Permanently floating home: section** (Building section). Factor Architecten · via Urban Green-blue Grids. [Source](https://urbangreenbluegrids.com/projects/amphibious-homes-maasbommel-the-netherlands/), [original](https://urbangreenbluegrids.com/uploads/Amfibiewoningen-Maasbommel-004-Factor-Architecten-bv-tiff1-950x311.jpg). Published architect’s section. Compare the floating base with the amphibious configuration below.
+- **Amphibious home: ground and flood levels** (Building section). Factor Architecten · via Urban Green-blue Grids. [Source](https://urbangreenbluegrids.com/projects/amphibious-homes-maasbommel-the-netherlands/), [original](https://urbangreenbluegrids.com/uploads/Amfibiewoningen-Maasbommel-004-Factor-Architecten-bv-tiff2-950x251.jpg). Published architect’s section showing the dwelling, guidance posts and sloping ground.
+
+### Katwijk Coastal Defence
+
+- [Project source](https://www.okra.nl/project/katwijk-coastal-defence/).
+- Photograph: Melle van Dijk · via OKRA. [Asset](https://www.okra.nl/wp-content/uploads/2023/06/20250705_KustwerkKatwijk_DJI_0145_mvd-1920x1280.jpg).
+- **Dyke, dunes and parking: spatial integration** (Axonometric design visualisation). OKRA. [Source](https://www.okra.nl/project/katwijk-coastal-defence/), [original](https://www.okra.nl/wp-content/uploads/2023/06/okra-katwijk-kustzone-5-1-976x702.jpg). Original design visualisation of the coastal section; not a measured construction drawing.
+- **Town-to-beach landscape layout** (Landscape plan / design illustration). OKRA. [Source](https://www.okra.nl/project/katwijk-coastal-defence/), [original](https://www.okra.nl/wp-content/uploads/2023/06/okra-katwijk-kustzone-6-scaled.jpg). Original published overhead drawing of the linear coastal landscape.
+
+### Overdiepse Polder
+
+- [Project source](https://www.boschslabbers.nl/en/project/overdiepse-polder/).
+- Photograph: YourCaptain aerial photography · via BoschSlabbers. [Asset](https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/06/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-oude-bergsche-maas-vogelvlucht-YourCaptain-01.jpg).
+- **Farm mound above the floodable landscape** (Profile / design visualisation). Onix architects · via BoschSlabbers. [Source](https://www.boschslabbers.nl/en/project/overdiepse-polder/), [original](https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/08/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-Boerdereiland-Onix-architecten-panelen-profiel.jpg). Authored design sheet combining a profile and a flood-scenario rendering; not a photograph of a flood.
+- **River and polder at different water levels** (Flood scenario analysis). BoschSlabbers. [Source](https://www.boschslabbers.nl/en/project/overdiepse-polder/), [original](https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/08/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-kaarten-vergelijk-stroom.jpg). Original diagram sequence comparing water levels and the role of the floodable polder.
+- **Upper mound, lower mound and farmyard** (Concept axonometrics). BoschSlabbers. [Source](https://www.boschslabbers.nl/en/project/overdiepse-polder/), [original](https://wp.boschslabbers.nl/wp-content/uploads/sites/3/2018/08/BoschSlabbers-landschapsarchitecten-Overdiepse-Polder-Terpenplan-Waaldijk-concept.jpg). Original design sequence explaining the organisation of a farm mound.
+
+### Eendragtspolder / Rowing Basin
+
+- [Project source](https://www.schielandendekrimpenerwaard.nl/wat-doen-we/zorg-voor-voldoende-water/waterberging-eendragtspolder/).
+- Photograph: HHSK · official project photograph. [Asset](https://fd-cdn.nl/12602-hhsk-website-prd/media/images/Eendragtspolder.2e16d0ba.fill-1290x946.format-webp.webp).
+- **Eendragtspolder: storage and operating principles** (Official project documentation). Hoogheemraadschap van Schieland en de Krimpenerwaard. [Source](https://www.schielandendekrimpenerwaard.nl/wat-doen-we/zorg-voor-voldoende-water/waterberging-eendragtspolder/), [original](https://www.schielandendekrimpenerwaard.nl/wat-doen-we/zorg-voor-voldoende-water/waterberging-eendragtspolder/). The water authority explains inflow, drainage, rowing and flood storage. This is a text-based technical source; a verified original engineering drawing is not yet included.
+
+### Dakpark Rotterdam
+
+- [Project source](https://www.santenco.nl/portfolio_page/dakpark/).
+- Photograph: Buro Sant en Co · published project photograph. [Asset](https://www.santenco.nl/wp-content/uploads/2016/09/buro-sant-en-co-landschapsarchitectuur-dakpark-rotterdam-ontwerp-luchtfoto-1.jpg).
+- **Dakpark: paths, planting and neighbourhood connections** (Landscape plan). Buro Sant en Co. [Source](https://www.santenco.nl/portfolio_page/dakpark/), [original](https://www.santenco.nl/wp-content/uploads/2016/09/buro-sant-en-co-landschapsarchitectuur-dakpark-rotterdam-ontwerp.jpg). Original landscape plan from the designer’s project publication.
+
+### Sponge Garden / Sponstuin
+
+- [Project source](https://www.urbanisten.nl/work/sponge-garden-dhkxw).
+- Photograph: De Urbanisten · published project photograph. [Asset](https://images.squarespace-cdn.com/content/v1/5f082078d610926644d22e00/56b0dfc4-19ad-403a-812f-8802bcde3598/WHURB85414crB.jpg?format=1500w).
+- **Collect, store, return** (Water cycle analysis). De Urbanisten. [Source](https://www.urbanisten.nl/work/sponge-garden-dhkxw), [original](https://images.squarespace-cdn.com/content/v1/5f082078d610926644d22e00/1594738239119-UZO1AM2QY531LOS273N5/Sponge+garden_Concept.jpg). The practice’s own diagram of the sponge principle.
+- **Three experimental landscape segments** (Systems plan / analysis). De Urbanisten. [Source](https://www.urbanisten.nl/work/sponge-garden-dhkxw), [original](https://images.squarespace-cdn.com/content/v1/5f082078d610926644d22e00/57732181-cd92-4013-8bb8-fc30840c91e8/04.+three+main+segments.jpg). Original diagram locating the garden’s wadi, raised gardens and soil test areas.
+
+### Waterdunen
+
+- [Project source](https://www.hetzeeuwselandschap.nl/natuurgebieden/waterdunen).
+- Photograph: Het Zeeuwse Landschap · published project photograph. [Asset](https://www.hetzeeuwselandschap.nl/sites/default/files/styles/full_page_hero_desktop/public/2022-09/DJI_0305-Pano_0.jpg?h=920929c4&itok=VjhA4OdJ).
+- **Waterdunen: official area map** (Site map / PDF). Het Zeeuwse Landschap. [Source](https://www.hetzeeuwselandschap.nl/natuurgebieden/waterdunen), [original](https://www.hetzeeuwselandschap.nl/sites/default/files/2026-04/Gebiedskaart%20Waterdunen.pdf). The nature manager’s published area map, linked from its current site. A visitor and habitat map, not an architectural floor plan.
