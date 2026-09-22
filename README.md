@@ -37,7 +37,7 @@ No package installation or build step is required. The published site is the con
 
 ## Content updates
 
-Research records are stored at the beginning of `dist/assets/script.js`. Replace edited field readings with Hao's final notes and add only quotations or interview material cleared for public use.
+Project metadata and short fallback readings are stored at the beginning of `dist/assets/script.js`. Expanded visited-site readings are stored in `dist/assets/field-notes.js`, with a title, two reading paragraphs, takeaway, open question and evidence basis. These expanded records take precedence in the record panel. Replace editorial interpretations with Hao's final notes where appropriate and add only quotations or interview material cleared for public use. See `FIELD_NOTES_REVIEW.md` for provenance and remaining evidence gaps.
 
 ## Image credits
 

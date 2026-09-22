@@ -303,6 +303,7 @@ function fitVisibleSites(visible, duration = 500) {
 
 function renderRecord() {
   const site = sites.find(item => item.id === activeSiteId) || orderedSites[0];
+  const note = site.status === "visited" ? window.atlasFieldNotes?.[site.id] : null;
   recordPanel.innerHTML = `
     <article class="record-inner ${site.status}">
       <div class="record-kicker"><span>${siteSymbol(site)} ${site.status === "suggested" ? "To study · Not visited" : "Field record"}</span><span>${site.status === "suggested" ? "Desk research" : site.date + " 2026"}</span></div>
@@ -317,8 +318,14 @@ function renderRecord() {
       </div>
       ${renderDrawings(site)}
       <section class="record-block"><h3>Project context</h3><p>${site.context}</p></section>
-      <section class="record-block"><h3>${site.status === "suggested" ? "Why study this site" : "Field reading"}</h3><p>${site.field}</p></section>
-      <section class="record-block insight"><h3>${site.status === "suggested" ? "Research question" : "Research insight"}</h3><p>${site.insight}</p></section>
+      ${note ? `
+      <section class="record-block"><h3>Field notes &amp; spatial reading</h3><h2>${escapeHtml(note.title)}</h2>${note.reading.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}</section>
+      <section class="record-block insight"><h3>Takeaway · Research interpretation</h3><p>${escapeHtml(note.takeaway)}</p></section>
+      <section class="record-block"><h3>Question to pursue</h3><p>${escapeHtml(note.question)}</p></section>
+      <section class="record-block evidence-basis"><h3>Evidence basis</h3><p>${escapeHtml(note.basis)}</p></section>
+      ` : `
+      <section class="record-block"><h3>${site.status === "suggested" ? "Why study this site" : "Field reading"}</h3><p>${escapeHtml(site.field)}</p></section>
+      <section class="record-block insight"><h3>${site.status === "suggested" ? "Research question" : "Research insight"}</h3><p>${escapeHtml(site.insight)}</p></section>`}
       <div class="record-facts">${site.facts.map(([label, value]) => `<div class="fact"><span>${label}</span><strong>${value}</strong></div>`).join("")}</div>
       <a class="source-link" href="${site.source}" target="_blank" rel="noreferrer">Open primary source ↗</a>
     </article>`;
