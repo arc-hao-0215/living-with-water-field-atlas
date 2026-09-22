@@ -144,6 +144,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--signal); outlin
 .record-block { padding: 18px 0; border-top: 1px solid var(--line); }
 .record-block h3 { margin: 0 0 9px; color: var(--muted); text-transform: uppercase; font: 10px/1 ui-monospace, monospace; letter-spacing: .08em; }
 .record-block p { margin: 0; font-size: 15px; line-height: 1.5; }
+.record-block h2 { margin: 0 0 14px; font-size: 22px; line-height: 1.2; font-weight: 500; }
+.record-block p + p { margin-top: 14px; }
+.record-block.evidence-basis p { color: var(--muted); font-size: 12px; line-height: 1.5; }
 .record-block.insight p { color: var(--water); font-size: 18px; line-height: 1.35; }
 .record-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: auto; background: var(--line); border: 1px solid var(--line); }
 .fact { padding: 12px; background: var(--ink); }
