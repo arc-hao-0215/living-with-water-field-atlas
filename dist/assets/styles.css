@@ -5,8 +5,8 @@
   --muted: #9da6a3;
   --line: rgba(237, 240, 236, 0.17);
   --line-strong: rgba(237, 240, 236, 0.38);
-  --water: #75d7e5;
-  --water-dim: rgba(117, 215, 229, 0.18);
+  --water: #60c6d8;
+  --water-dim: rgba(96, 198, 216, 0.18);
   --signal: #d7ff45;
   --header-h: 78px;
   --toolbar-h: 74px;
@@ -106,7 +106,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--signal); outlin
 .field-marker-shell { border: 0; background: transparent; }
 .field-marker { width: 30px; height: 30px; display: grid; place-items: center; padding: 0; border: 1px solid #f2f2ed; border-radius: 50%; color: #f2f2ed; background: #171a1b; box-shadow: 0 0 0 1px rgba(23,26,27,.45); cursor: pointer; transition: transform .18s, color .18s, background .18s, opacity .18s, box-shadow .18s; }
 .field-marker span { font: 10px/1 ui-monospace, monospace; pointer-events: none; }
-.field-marker:hover, .field-marker.is-active { color: #171a1b; background: var(--water); border-color: #171a1b; transform: scale(1.16); box-shadow: 0 0 0 5px rgba(117,215,229,.25), 0 0 0 1px #171a1b; }
+.field-marker:hover, .field-marker.is-active { color: #171a1b; background: var(--water); border-color: #171a1b; transform: scale(1.16); box-shadow: 0 0 0 5px rgba(96,198,216,.25), 0 0 0 1px #171a1b; }
 .field-marker.is-filtered { opacity: 0; pointer-events: none; }
 .field-marker:focus-visible { outline: 2px solid #171a1b; outline-offset: 4px; }
 .map-folio { position: absolute; z-index: 2; top: 18px; left: 18px; width: 138px; padding: 11px 12px 10px; display: grid; gap: 5px; color: #171a1b; background: rgba(242,242,237,.9); border: 1px solid #171a1b; font: 9px/1.1 ui-monospace, monospace; letter-spacing: .08em; pointer-events: none; }
@@ -138,7 +138,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--signal); outlin
 .drawing-heading span { color: #59615e; }
 .drawing-heading strong { max-width: 68%; text-align: right; font-weight: 700; }
 .analysis-drawing svg { display: block; width: 100%; height: auto; padding: 7px; fill: none; stroke: #171a1b; stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter; }
-.analysis-drawing svg .water-fill { fill: rgba(117,215,229,.38); stroke: #171a1b; }
+.analysis-drawing svg .water-fill { fill: rgba(96,198,216,.38); stroke: #171a1b; }
 .analysis-drawing svg .flow { stroke: #16879a; stroke-width: 3; stroke-dasharray: 8 6; }
 .analysis-drawing figcaption { min-height: 46px; color: #3e4745; background: #f2f2ed; border-top-color: #171a1b; text-transform: none; font-size: 10px; }
 .record-block { padding: 18px 0; border-top: 1px solid var(--line); }
