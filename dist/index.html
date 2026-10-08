@@ -9,6 +9,11 @@
       content="Hao Chang's interactive field atlas of water, infrastructure, and urban development in the Netherlands."
     />
     <title>Living with Water | Hao Chang</title>
+    <script>
+      if (new URLSearchParams(window.location.search).get("embed") === "1") {
+        document.documentElement.classList.add("embedded-atlas");
+      }
+    </script>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link href="./assets/vendor/leaflet.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/styles.css?v=20260922-fieldnotes-2" />
