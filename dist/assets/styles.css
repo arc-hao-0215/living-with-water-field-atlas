@@ -324,3 +324,26 @@ tbody tr:hover { background: rgba(255,255,255,.035); }
 .drawing-document p { color: var(--muted); font-size: 12px; line-height: 1.5; }
 .drawing-document a { display: inline-block; padding: 10px 0; font: 11px/1.5 ui-monospace, monospace; color: var(--water); text-underline-offset: 4px; }
 .drawing-document small { display: block; margin-top: 8px; font-size: 10px; color: var(--muted); }
+
+
+/* Compact embedded mode: parent portfolio supplies identity, title and full-page link. */
+html.embedded-atlas .site-header,
+html.embedded-atlas .site-footer,
+html.embedded-atlas .skip-link { display: none; }
+html.embedded-atlas .atlas-toolbar { padding-top: 10px; padding-bottom: 10px; }
+html.embedded-atlas .atlas-workspace {
+  height: calc(100dvh - var(--toolbar-h));
+  min-height: 600px;
+}
+@media (max-width: 920px) {
+  html.embedded-atlas .atlas-workspace {
+    height: auto;
+    min-height: 0;
+    grid-template-rows: minmax(550px, 72dvh) auto;
+  }
+}
+@media (max-width: 640px) {
+  html.embedded-atlas .atlas-workspace { display: flex; flex-direction: column; }
+  html.embedded-atlas .stage { height: 62dvh; min-height: 420px; }
+  html.embedded-atlas .atlas-toolbar { min-height: 110px; }
+}
