@@ -418,3 +418,17 @@ const methodDialog = document.querySelector("#methodDialog");
 document.querySelector("#methodButton").addEventListener("click", () => methodDialog.showModal());
 document.querySelector("#closeMethod").addEventListener("click", () => methodDialog.close());
 methodDialog.addEventListener("click", event => { if (event.target === methodDialog) methodDialog.close(); });
+
+/* Protect atlas drawing previews (leave Leaflet tiles interactive). */
+(() => {
+  const isDrawing = target => target instanceof Element &&
+    !!target.closest('.drawing-viewport img');
+  document.addEventListener('contextmenu', event => {
+    if (isDrawing(event.target)) event.preventDefault();
+  }, true);
+  document.addEventListener('dragstart', event => {
+    if (isDrawing(event.target)) event.preventDefault();
+  }, true);
+  const image = document.querySelector('#drawingImage');
+  if (image) image.draggable = false;
+})();
