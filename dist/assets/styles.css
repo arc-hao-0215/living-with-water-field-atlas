@@ -347,3 +347,11 @@ html.embedded-atlas .atlas-workspace {
   html.embedded-atlas .stage { height: 62dvh; min-height: 420px; }
   html.embedded-atlas .atlas-toolbar { min-height: 110px; }
 }
+
+/* Protect atlas drawing previews (leave Leaflet tiles interactive). */
+.drawing-viewport img {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
